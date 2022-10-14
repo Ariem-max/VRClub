@@ -1,0 +1,25 @@
+{
+  "name": "vr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariem-max/VRClub.git"
+  },
+  "keywords": [
+    "vr"
+  ],
+  "author": "artem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ariem-max/VRClub/issues"
+  },
+  "homepage": "https://github.com/Ariem-max/VRClub#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
