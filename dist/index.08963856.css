@@ -1,3 +1,31 @@
+@import "https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@font-face {
+  font-family: DGO;
+  src: url("DelaGothicOne-Regular.9b302fb0.ttf");
+}
+
+* {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000 !important;
+  background-image: url("woman-6882918 1.2ed111f9.jpg") !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 900px !important;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1399.28px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  display: flex;
+}
+
 .header {
   width: 100%;
   height: 40px;
@@ -5,17 +33,13 @@
 }
 
 .header .wrapper {
-  width: 100%;
-  height: 100%;
-  max-width: 1399.28px;
   flex-direction: row;
   align-items: center;
-  margin: 0 auto;
-  display: flex;
 }
 
 .header .logo-link {
   margin-right: 122px;
+  font-family: Montserrat;
 }
 
 .header .nav {
@@ -26,11 +50,128 @@
   display: flex;
 }
 
+.header .nav .nav-link {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.header .btn {
+  margin-right: 20px;
+}
+
+.header .tel-link {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 160%;
+}
+
 .btn {
+  color: #fff;
   border: 1px solid #fff;
   border-radius: 32px;
-  margin-right: 20px;
   padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 160%;
+  transition: transform .2s;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.promo .heading {
+  color: #fff;
+  max-width: 489px;
+  text-transform: uppercase;
+  margin-top: 186px;
+  margin-bottom: 16px;
+  font-family: DGO;
+  font-size: 48px;
+  line-height: 118%;
+}
+
+.promo .description {
+  color: #fff;
+  max-width: 464px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.promo .btns {
+  flex-direction: row;
+  align-items: center;
+  gap: 31px;
+  margin-bottom: 175px;
+  display: flex;
+}
+
+.promo .socials {
+  margin-bottom: 66px;
+}
+
+.btn-pink {
+  background: #e32966;
+  border: none;
+  box-shadow: 0 9px 26px #e329664d;
+}
+
+.btn-otline {
+  border: 1.5px solid #e32966;
+}
+
+.socials {
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.about .wrapper .subheading {
+  text-transform: uppercase;
+  color: #fff;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 62px;
+  font-family: DGO;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118%;
+  display: flex;
+}
+
+.about .wrapper .content {
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.about .wrapper .content .text-content {
+  max-width: 337px;
+}
+
+.about .wrapper .content .text-about {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  display: flex;
+}
+
+.about .wrapper .content .text-about:first-of-type {
+  margin-top: 41px;
+  margin-bottom: 29px;
 }
 
 body {

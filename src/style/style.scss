@@ -1,22 +1,51 @@
+// @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); // Dela Gothic One
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap'); //*Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: "DGO";
+    src: url(/src/assets/fonts/DelaGothicOne-Regular.ttf);
+}
+
 $wrapper-width:1399.28px;
 $brend-color:#E32966;
-$grey:rgba(255, 255, 255, 0.7);
+$grey:rgba(255,
+255,
+255,
+0.7);
 $white:#ffffff;
+* {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(../assets/woman-6882918\ 1.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-position: top !important;
+    background-size: 100% 900px !important;
+    background-color: black !important;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: $wrapper-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .header {
     width: 100%;
     height: 40px;
     margin-top: 48px;
     .wrapper {
-        width: 100%;
-        height: 100%;
-        max-width: $wrapper-width;
-        margin: 0 auto;
-        display: flex;
         flex-direction: row;
         align-items: center;
     }
     .logo-link {
         margin-right: 122px;
+        font-family: Montserrat;
     }
     .nav {
         display: flex;
@@ -24,6 +53,22 @@ $white:#ffffff;
         align-items: center;
         gap: 50px;
         margin-right: auto;
+        .nav-link {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 160%;
+            color: #FFFFFF;
+        }
+    }
+    .btn {
+        margin-right: 20px;
+    }
+    .tel-link {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 160%;
+        color: #FFFFFF;
     }
 }
 
@@ -31,5 +76,102 @@ $white:#ffffff;
     padding: 8px 20px;
     border: 1px solid $white;
     border-radius: 32px;
-    margin-right: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+    color: #FFFFFF;
+    &:active {
+        transform: translateY(2px);
+    }
+    transition: transform 0.2s ease;
+}
+
+.promo {
+    .heading {
+        margin-top: 186px;
+        margin-bottom: 16px;
+        font-family: 'DGO';
+        font-size: 48px;
+        line-height: 118%;
+        color: #FFFFFF;
+        max-width: 489px;
+        text-transform: uppercase;
+    }
+    .description {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+        max-width: 464px;
+    }
+    .btns {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 31px;
+        margin-bottom: 175px;
+    }
+    .socials {
+        margin-bottom: 66px;
+    }
+}
+
+.btn-pink {
+    background: #E32966;
+    box-shadow: 0px 9px 26px rgba(227, 41, 102, 0.3);
+    border: none;
+}
+
+.btn-otline {
+    border: 1.5px solid #E32966;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.about {
+    .wrapper {
+        .subheading {
+            margin-top: 96px;
+            margin-bottom: 62px;
+            font-family: DGO;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 118%;
+            /* or 47px */
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            text-align: left;
+            align-items: center;
+            .text-content {
+                max-width: 337px;
+            }
+            .text-about {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 160%;
+                color: #FFFFFF;
+                display: flex;
+            }
+            .text-about:first-of-type {
+                margin-top: 41px;
+                margin-bottom: 29px;
+            }
+        }
+    }
 }
