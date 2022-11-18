@@ -6,6 +6,7 @@
     src: url(/src/assets/fonts/DelaGothicOne-Regular.ttf);
 }
 
+@import './swiper.scss';
 $wrapper-width:1399.28px;
 $brend-color:#E32966;
 $grey:rgba(255,
@@ -35,6 +36,9 @@ body {
     align-items: flex-start;
 }
 
+// section {
+//     margin: 96px 0;
+// }
 .header {
     width: 100%;
     height: 40px;
@@ -135,22 +139,23 @@ body {
     gap: 20px;
 }
 
+.subheading {
+    margin-top: 96px;
+    margin-bottom: 62px;
+    font-family: DGO;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 118%;
+    /* or 47px */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 .about {
     .wrapper {
-        .subheading {
-            margin-top: 96px;
-            margin-bottom: 62px;
-            font-family: DGO;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 40px;
-            line-height: 118%;
-            /* or 47px */
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            color: #FFFFFF;
-        }
         .content {
             display: flex;
             width: 100%;
@@ -172,6 +177,441 @@ body {
                 margin-top: 41px;
                 margin-bottom: 29px;
             }
+        }
+    }
+}
+
+.play {
+    .swiper-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 134px;
+        position: relative;
+        .swiper {
+            margin: 0;
+            width: 100%;
+            max-width: 914px;
+            margin-right: 78px;
+        }
+        .left,
+        .right {
+            position: absolute;
+            cursor: pointer;
+            top: 189px;
+        }
+        .right {
+            right: 0;
+        }
+        .left {}
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 43px;
+        .menu-btn {
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 118%;
+            /* or 28px */
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            opacity: 0.7;
+            background: none;
+            gap: 8px;
+            border: none;
+            &:hover {
+                color: #E32966;
+                * {
+                    fill: #E32966;
+                }
+            }
+            * {
+                fill: #FFFFFF;
+                transform: translateY(3px);
+            }
+        }
+        .active-btn {
+            color: #E32966;
+            filter: drop-shadow(0px 0px 4px #E32966);
+            * {
+                fill: #E32966;
+            }
+        }
+    }
+}
+
+.game-halls {
+    .wrapper {
+        .cards {
+            display: flex;
+            flex-direction: row;
+            gap: 130px;
+            .card {
+                background: radial-gradient(72.18% 43.92% at 50% 93.92%, #A40A79 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                , radial-gradient(37.71% 30.53% at 4.78% 4.31%, #008DF3 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                , radial-gradient(51.22% 43.71% at 98.22% 1.22%, #DC18C8 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                , rgba(22, 43, 237, 0.5);
+                // opacity: 0.5; не совсем понимаю почему затемнение 
+                width: 391px;
+                height: 450px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: box-shadow 0.13s;
+                filter: drop-shadow(0px 8px 24px rgba(255, 255, 255, 0.15));
+                // &:hover {
+                //     box-shadow: 0px 0px 20px 0px white;
+                // }
+                .icon {
+                    background-image: url(/src/assets/Rectangle\ 11.jpg);
+                    width: 391px;
+                    height: 213px;
+                }
+                .icon2 {
+                    background-image: url(/src/assets/Rectangle\ 13.jpg);
+                    width: 391px;
+                    height: 213px;
+                }
+                .icon3 {
+                    background-image: url(/src/assets/Rectangle.jpg);
+                    width: 390px;
+                    height: 210px;
+                }
+                .txt-card {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 118%;
+                    /* or 21px */
+                    color: #FFFFFF;
+                    margin-top: 26px;
+                }
+                .description-card {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 118%;
+                    /* or 21px */
+                    text-align: center;
+                    color: #FFFFFF;
+                    margin-top: 9px;
+                    max-width: 310px;
+                }
+                .btn-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    background: #E32966;
+                    border: 1px solid #E32966;
+                    box-shadow: 0px 9px 26px rgba(227, 41, 102, 0.3);
+                    border-radius: 32px;
+                    padding: 12px 30px;
+                    gap: 10px;
+                    margin-top: 21px;
+                    width: 100%;
+                    max-width: 172px;
+                    max-height: 47px;
+                    flex-direction: column;
+                    width: fit-content;
+                    flex: none;
+                    order: 0;
+                    color: #FFFFFF;
+                    flex-grow: 0;
+                    &:hover {
+                        box-shadow: 0px 0px 20px 0px #E32966;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.price {
+    .table {
+        width: 100%;
+        min-height: 550px;
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            .td {
+                width: 321.41px;
+                height: 98.09px;
+                background: rgba(196, 196, 196, 0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 118%;
+                /* identical to box height, or 24px */
+                color: #FFFFFF;
+            }
+            .h-td-main {
+                background: none !important;
+                background-image: url(/src/assets/Group\ 27.png) !important;
+                background-size: 100% !important;
+                background-repeat: no-repeat;
+                width: 321.41px !important;
+            }
+            .h-td {
+                width: 321.41px;
+                height: 131.49px;
+                background: #1F1F22;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                .td-title-player {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                }
+                .td-title-time {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+                h4 {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 118%;
+                    /* or 24px */
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    .swiper-pagination {
+        width: fit-content;
+        position: static;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160%;
+        /* or 38px */
+        color: #FFFFFF;
+        .swiper-pagination-current {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 160%;
+            /* or 51px */
+            color: #FFFFFF;
+        }
+    }
+    .content {
+        display: flex;
+        width: 100%;
+    }
+    .slide-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        height: 100%;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(/src/assets/Rectangle\ 10\ \(Strok\).png);
+            display: inline-block;
+            width: 446px;
+            height: 529px;
+            background-size: contain;
+        }
+    }
+    .navigation {
+        width: 127px;
+        min-height: 51px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 72px;
+        text-align: center;
+        margin: auto;
+        left: 0;
+        right: 0;
+        z-index: 9999999;
+    }
+    .arrow-right,
+    .arrow-left {
+        cursor: pointer;
+    }
+    .swiper-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 118%;
+        color: #FFFFFF;
+        max-width: 281px;
+        align-items: center;
+        &:first-child {
+            margin-top: 73px;
+        }
+    }
+    .swiper {
+        position: relative;
+        width: 100%;
+        max-width: 446px;
+        background: radial-gradient(72.18% 43.92% at 50% 93.92%, #A40A79 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(37.71% 30.53% at 4.78% 4.31%, #008DF3 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(51.22% 43.71% at 98.22% 1.22%, #DC18C8 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , rgba(22, 43, 237, 0.5);
+        /* Тень */
+        box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.contacts {
+    .subheading {
+        margin-top: 0;
+    }
+    margin-top: 108px;
+    justify-content: space-between;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 47px;
+        .map {
+            width: 1045px;
+            height: 399px;
+        }
+    }
+    .subheading-h3 {
+        font-family: DGO;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 118%;
+        /* or 28px */
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 32px;
+    }
+    .contacts-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 118%;
+        /* or 21px */
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        margin-top: 24px;
+    }
+    .tel-contacts {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        /* identical to box height, or 29px */
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        margin-top: 32px;
+    }
+    .social-item {
+        margin-top: 33px;
+    }
+}
+
+footer {
+    height: 40px;
+    z-index: -2;
+    margin-top: 58px;
+    background: radial-gradient(72.18% 43.92% at 50% 93.92%, #A40A79 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , radial-gradient(37.71% 30.53% at 4.78% 4.31%, #008DF3 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , radial-gradient(51.22% 43.71% at 98.22% 1.22%, #DC18C8 0%, rgba(0, 0, 0, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , rgba(22, 43, 237, 0.5);
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    height: 111px;
+    position: relative;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        z-index: -1;
+    }
+    .wrapper {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 111px;
+        display: flex;
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+        .nav-fotter {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+        }
+        .nav-link {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 160%;
+            /* identical to box height, or 24px */
+            color: #FFFFFF !important;
+            gap: 50px;
+        }
+        .logo-link {
+            margin-right: 147px;
+        }
+        .politic-footer {
+            display: flex;
+            gap: 20px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.01em;
+            color: #C7C7C7;
+            opacity: 0.5;
+            margin-left: 140px;
         }
     }
 }

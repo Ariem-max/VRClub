@@ -20,8 +20,10 @@
     },
     "homepage": "https://github.com/Ariem-max/VRClub#readme",
     "dependencies": {
+        "boxicons": "^2.1.4",
         "resetcss": "^1.0.3",
-        "sass": "^1.55.0"
+        "sass": "^1.55.0",
+        "swiper": "^8.4.4"
     },
     "devDependencies": {
         "@parcel/transformer-sass": "^2.7.0"
